@@ -1,0 +1,195 @@
+# ===========================================================================
+# Multilingual file for the TOS 7 Docker application "qdrantdocker".
+# File name MUST be: <appid>.lang.  23-language superset (14 required by TOS).
+# The App Center picks the text matching the user's device language;
+# untranslated nodes fall back to English, which the official guide allows.
+# Fields: name (app title), auth (upstream author), descript (up to 512
+# chars), release_note, important (up to 512 chars).
+# Translations come from tosapp.json "translations"; run
+#   tosdocker lang <app>          to re-render this file
+#   tosdocker translate <app>     to see what still needs translating
+# ===========================================================================
+[en-us]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[zh-cn]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant 是一个向量检索引擎：存向量、毫秒级找最近邻，支持 payload 过滤、集合与快照。它是 RAG 与语义搜索应用的存储底座——让 AnythingLLM、Dify 或你自己的代码连它的 HTTP API，内置 dashboard 可以查看集合。以非 root 容器运行，数据保存在应用数据目录。"
+release_note = "1. 首个版本：基于 Docker Hub 的 Qdrant 1.20.1（unprivileged 镜像），以非 root 容器运行。向量检索，提供 REST API 与 dashboard，数据持久化在应用数据目录。"
+important    = "需要 DockerEngine（缺失时应用中心会自动安装）。HTTP API 监听已发布端口（6333，同时提供 /dashboard），gRPC 端口 6334 未发布。默认没有任何鉴权——请只在内网使用，暴露到公网前务必加一层带认证的反向代理。集合、payload 与快照保存在 DockerAppData/qdrantdocker/storage。接口为纯 HTTP，远程访问请配 TLS。"
+
+[zh-hk]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant 是一個向量檢索引擎：存向量、毫秒級找最近鄰，支援 payload 過濾、集合與快照。它是 RAG 與語義搜尋應用的存儲底座——讓 AnythingLLM、Dify 或你自己的程式碼連它的 HTTP API，內建 dashboard 可以查看集合。以非 root 容器運行，資料保存在應用資料目錄。"
+release_note = "1. 首個版本：基於 Docker Hub 的 Qdrant 1.20.1（unprivileged 映像），以非 root 容器運行。向量檢索，提供 REST API 與 dashboard，資料持久化在應用資料目錄。"
+important    = "需要 DockerEngine（缺少時應用中心會自動安裝）。HTTP API 監聽已發佈端口（6333，同時提供 /dashboard），gRPC 端口 6334 未發佈。預設沒有任何鑑權——請只在內網使用，公開到互聯網前務必加一層帶認證的反向代理。集合、payload 與快照保存在 DockerAppData/qdrantdocker/storage。介面為純 HTTP，遠端存取請配 TLS。"
+
+[fr-fr]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[de-de]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[it-it]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[es-es]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[hu-hu]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[ja-jp]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[ko-kr]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[pl-pl]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[ru-ru]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[tr-tr]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[pt-pt]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[ar-sa]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[cs-cz]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[he-il]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[id-id]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[nb-no]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[nl-nl]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[sv-se]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[th-th]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+
+[vi-vn]
+name         = "Qdrant"
+auth         = "qdrant"
+version      = "@@VERSION@@"
+descript     = "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder."
+release_note = "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access."
+

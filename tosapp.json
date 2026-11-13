@@ -1,0 +1,109 @@
+{
+  "app_id": "qdrantdocker",
+  "title": "Qdrant",
+  "image": "qdrant/qdrant:v1.20.1-unprivileged",
+  "repo_name": "qdrant",
+  "mode": "plain",
+  "container_port": 6333,
+  "category": [
+    "Artificial_Intelligence"
+  ],
+  "volumes": [
+    {
+      "host": "/Volume1/DockerAppData/qdrantdocker/storage",
+      "container": "/qdrant/storage"
+    }
+  ],
+  "env": {
+    "TZ": "Asia/Shanghai"
+  },
+  "auth": "qdrant",
+  "upstream_url": "https://github.com/qdrant/qdrant",
+  "upstream_license": "Apache-2.0",
+  "descript": "Qdrant is a vector search engine: store embeddings and find the nearest neighbours in milliseconds, with payload filtering, collections and snapshots. It is the storage layer behind RAG apps and semantic search - point AnythingLLM, Dify or your own code at its HTTP API, and use the built-in dashboard to inspect collections. Runs as a non-root container with data in the application folder.",
+  "release_note": "1. First release: Qdrant 1.20.1 (unprivileged image) from Docker Hub as a non-root container. Vector search with REST API and dashboard, data persisted in the application data folder.",
+  "important": "Requires DockerEngine (installed automatically if missing). The HTTP API listens on the published port (6333, also serves /dashboard); the gRPC port 6334 is not published. There is NO authentication by default - keep it on your LAN or put an authenticating reverse proxy in front before exposing it. Collections, payloads and snapshots live in DockerAppData/qdrantdocker/storage. Plain HTTP; use TLS for remote access.",
+  "probe": {
+    "user_in_image": "1000:1000",
+    "entrypoint": null,
+    "cmd": [
+      "./entrypoint.sh"
+    ],
+    "exposed_ports": [
+      6333,
+      6334
+    ],
+    "declared_volumes": [],
+    "image_healthcheck": [],
+    "digest": "qdrant/qdrant@sha256:a5872d32bdeef0f7ed4c1115bfb66d688ecd037703288a2484ccb1d4e5016bb9",
+    "architecture": "x86_64",
+    "platforms": [
+      "x86_64",
+      "aarch64"
+    ],
+    "http_client_in_image": "",
+    "trial_run": {
+      "ok": true,
+      "http_code": "200",
+      "state": "running",
+      "paths": [
+        "/qdrant",
+        "/qdrant/storage"
+      ],
+      "host_port": 18000,
+      "log_tail": " | | | | |_  \n \\__, |\\__,_|_|  \\__,_|_| |_|\\__| \n    |_|                           \n\nVersion: 1.20.1\nAccess web UI at http://localhost:6333/dashboard\nAgentic Skills: https://skills.qdrant.tech/\n\n2026-11-13T17:52:18.174000Z  WARN qdrant: There is a potential issue with the filesystem for storage path ./storage. Details: Container filesystem detected - storage might be lost with container re-creation\n2026-11-13T17:52:18.174341Z  INFO storage::content_manager::consensus::persistent: Initializing new raft state at ./storage/raft_state.json\n2026-11-13T17:52:18.203313Z  INFO qdrant: Distributed mode disabled\n2026-11-13T17:52:18.203385Z  INFO qdrant: Telemetry reporting enabled, id: b0f19002-fa5e-401d-89bd-541dff0b9544\n2026-11-13T17:52:18.229067Z  INFO qdrant::actix: REST transport settings: keep_alive=5s, client_request_timeout=5s, client_disconnect_timeout=5s\n2026-11-13T17:52:18.229160Z  INFO qdrant::actix: TLS disabled for REST API\n2026-11-13T17:52:18.229229Z  INFO qdrant::actix: Qdrant HTTP listening on 6333\n2026-11-13T17:52:18.229249Z  INFO actix_server::builder: starting 7 workers\n2026-11-13T17:52:18.229266Z  INFO actix_server::server: Actix runtime found; starting in Actix runtime\n2026-11-13T17:52:18.229271Z  INFO actix_server::server: starting service: \"actix-web-service-0.0.0.0:6333\", workers: 7, listening on: 0.0.0.0:6333\n2026-11-13T17:52:18.240208Z  INFO qdrant::tonic: Qdrant gRPC listening on 6334\n2026-11-13T17:52:18.240338Z  INFO qdrant::tonic: TLS disabled for gRPC API",
+      "files_in_mounts": ""
+    },
+    "docker_hub": {},
+    "github": {
+      "owner": "qdrant",
+      "repo": "qdrant",
+      "description": "Qdrant - High-performance, massive-scale Vector Database and Vector Search Engine for the next generation of AI. Also available in the cloud https://cloud.qdrant.io/",
+      "license": "Apache-2.0",
+      "homepage": "https://qdrant.tech"
+    }
+  },
+  "platform": "x86_64",
+  "user": "1000:1000",
+  "publisher": "Moechz",
+  "compose_project": "qdrantdocker",
+  "github_repo": "qdrant",
+  "upstream_version": "1.20.1",
+  "release_tag_prefix": "v",
+  "version": "1.20.1-1",
+  "help": "https://github.com/Moechz/qdrant/issues",
+  "official": "https://github.com/qdrant/qdrant",
+  "license": "Apache-2.0",
+  "docker_socket": false,
+  "group_add": [],
+  "healthcheck": [
+    "CMD-SHELL",
+    "bash -c 'exec 3<>/dev/tcp/127.0.0.1/6333' || exit 1"
+  ],
+  "healthcheck_start_period": "40s",
+  "http_path": "/healthz",
+  "translations": {
+    "zh-cn": {
+      "descript": "Qdrant 是一个向量检索引擎：存向量、毫秒级找最近邻，支持 payload 过滤、集合与快照。它是 RAG 与语义搜索应用的存储底座——让 AnythingLLM、Dify 或你自己的代码连它的 HTTP API，内置 dashboard 可以查看集合。以非 root 容器运行，数据保存在应用数据目录。",
+      "important": "需要 DockerEngine（缺失时应用中心会自动安装）。HTTP API 监听已发布端口（6333，同时提供 /dashboard），gRPC 端口 6334 未发布。默认没有任何鉴权——请只在内网使用，暴露到公网前务必加一层带认证的反向代理。集合、payload 与快照保存在 DockerAppData/qdrantdocker/storage。接口为纯 HTTP，远程访问请配 TLS。",
+      "release_note": "1. 首个版本：基于 Docker Hub 的 Qdrant 1.20.1（unprivileged 镜像），以非 root 容器运行。向量检索，提供 REST API 与 dashboard，数据持久化在应用数据目录。"
+    },
+    "zh-hk": {
+      "descript": "Qdrant 是一個向量檢索引擎：存向量、毫秒級找最近鄰，支援 payload 過濾、集合與快照。它是 RAG 與語義搜尋應用的存儲底座——讓 AnythingLLM、Dify 或你自己的程式碼連它的 HTTP API，內建 dashboard 可以查看集合。以非 root 容器運行，資料保存在應用資料目錄。",
+      "important": "需要 DockerEngine（缺少時應用中心會自動安裝）。HTTP API 監聽已發佈端口（6333，同時提供 /dashboard），gRPC 端口 6334 未發佈。預設沒有任何鑑權——請只在內網使用，公開到互聯網前務必加一層帶認證的反向代理。集合、payload 與快照保存在 DockerAppData/qdrantdocker/storage。介面為純 HTTP，遠端存取請配 TLS。",
+      "release_note": "1. 首個版本：基於 Docker Hub 的 Qdrant 1.20.1（unprivileged 映像），以非 root 容器運行。向量檢索，提供 REST API 與 dashboard，資料持久化在應用資料目錄。"
+    }
+  },
+  "data_notes": "`/qdrant/storage` (mounted from `DockerAppData/qdrantdocker/storage`) holds the collections, WAL and snapshots; the dashboard is served at `/dashboard` on the same port.",
+  "design_notes": [
+    "**Unprivileged image variant.** The package uses `qdrant/qdrant:<version>-unprivileged`, which is built to run as uid 1000 - the standard image requires root and panics otherwise.",
+    "**One HTTP port.** REST API, dashboard and health endpoint share 6333; gRPC 6334 stays internal.",
+    "**API-only by default.** No dashboard auth - the package says so and recommends a proxy."
+  ],
+  "limitations": [
+    "- No authentication out of the box; anyone reaching port 6333 can read and write collections.",
+    "- Only the HTTP API is published; gRPC clients from other machines need a reverse proxy or a second port, which the store rules do not allow.",
+    "- The dashboard is a thin viewer; heavy administration is done through the API or SDKs."
+  ],
+  "host_port": 8009
+}
